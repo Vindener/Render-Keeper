@@ -1,0 +1,54 @@
+.env.example
+  h_dfa0da26a12699 1-9
+.dockerignore
+  s_50a73cdd22eb8f::t_187f5a243c8d8f 1-7
+.gitignore
+  s_50a73cdd22eb8f::t_7e98229f065983 1-6
+Dockerfile
+  s_50a73cdd22eb8f::t_1b09fd35551524 1-20
+README.md
+  s_50a73cdd22eb8f::t_7b862e3cea9c96 1-129
+bin/keeper.mjs
+  s_50a73cdd22eb8f::t_32483219666029 1-73
+docker-compose.yml
+  s_50a73cdd22eb8f::t_50cdccc4823eab 1-25
+package.json
+  s_50a73cdd22eb8f::t_b77d51931d96f4 1-18
+src/config.mjs
+  s_50a73cdd22eb8f::t_e365a6e2c6afb6 1-130
+src/keeper.mjs
+  s_50a73cdd22eb8f::t_39499b0bc68464 1-114
+src/schedule.mjs
+  s_50a73cdd22eb8f::t_07d3098d993900 1-50
+src/worker.mjs
+  s_50a73cdd22eb8f::t_3a32c030cf7da7 1-49
+test/keeper.test.mjs
+  s_50a73cdd22eb8f::t_dcb024e47ba196 1-236
+test/schedule.test.mjs
+  s_50a73cdd22eb8f::t_bc5e9afb7d6b4a 1-95
+wrangler.toml
+  s_50a73cdd22eb8f::t_a433bb9184466c 1-23
+.env.2.example
+  h_dfa0da26a12699 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7cf6aab44f7047db8df4165ddfebc1152e4707b",
+  "prompts": {},
+  "humans": {
+    "h_dfa0da26a12699": {
+      "author": "Vindener <vindener12@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_50a73cdd22eb8f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "651c5e20-7e43-4d87-9bdf-bbf94ff5c6ef",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Vindener <vindener12@gmail.com>"
+    }
+  }
+}
