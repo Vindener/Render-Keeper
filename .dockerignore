@@ -1,0 +1,7 @@
+.env
+.dev.vars
+.wrangler
+test
+node_modules
+*.md
+wrangler.toml

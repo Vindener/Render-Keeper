@@ -1,0 +1,25 @@
+# docker compose up -d --build      (from the project root)
+# Each service is one keeper instance with its own env file:
+#   keeper    — first backend (.env)
+#   keeper-2  — second backend, wake-up pings only (.env.2)
+# Start just one: docker compose up -d --build keeper-2
+x-keeper: &keeper
+  build: .
+  image: render-keeper
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options:
+      max-size: "5m"
+      max-file: "3"
+
+services:
+  keeper:
+    <<: *keeper
+    container_name: render-keeper
+    env_file: .env
+
+  keeper-2:
+    <<: *keeper
+    container_name: render-keeper-2
+    env_file: .env.2

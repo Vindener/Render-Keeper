@@ -1,0 +1,23 @@
+# Cloudflare Worker for the keeper (free plan is enough: 144 cron runs/day).
+# Deploy: see README.md. The secret is NOT stored here:
+#   npx wrangler@4 secret put BACKEND_URL     (e.g. https://<your-app>.onrender.com/api)
+#   npx wrangler@4 secret put SYNC_SECRET     (optional; enables the sync call)
+name = "render-keeper"
+main = "src/worker.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# UTC cron, every 10 minutes; the Kyiv window is applied in code (handles DST)
+[triggers]
+crons = ["*/10 * * * *"]
+
+[vars]
+TIMEZONE = "Europe/Kyiv"
+# keep-awake window in TIMEZONE, end exclusive; "00:00-24:00" = around the clock
+ACTIVE_HOURS = "08:00-22:00"
+ACTIVE_DAYS = "1-7"
+TICK_MIN = "10"
+SYNC_EVERY_MIN = "30"
+
+[observability]
+enabled = true
